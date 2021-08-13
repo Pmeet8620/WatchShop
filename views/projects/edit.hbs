@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+<form method="POST">
+    <fieldset>
+        <label for="name" class="col-2">Name:</label>
+        <input name="name" id="name value="{{project.name}}"/>
+    </fieldset>
+        <fieldset>
+        <label for="price" class="col-2">Price:</label>
+        <input name="price" id="price value="{{project.price}}"/>
+    </fieldset>
+        <fieldset>
+        <label for="model" class="col-2">Model:</label>
+        <select name="model" id="model">
+        {{#each models}}
+            {{!-- <option>{{this.name}}</option> --}}
+            {{createOption this.name ../project.model}}
+            {{/each}}
+            </select> 
+    </fieldset>
+        <fieldset>
+        <label for="color" class="col-2">Color:</label>
+        <input name="color" id="color"/>
+    </fieldset>
+    <button class="offset-3 btn btn-primary">Save</button>
+</form>

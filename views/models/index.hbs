@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+
+<a href="/models/add"> Add a new Model </a>
+
+<table>
+    <thead>
+        <th> Name </th>
+    </thead>
+    {{#each dataset}}
+    <tr>
+        <td>{{this.name}}</td>
+        
+    </tr>
+    {{/each}}
+</table>

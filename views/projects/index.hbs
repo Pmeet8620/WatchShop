@@ -1,0 +1,25 @@
+<h1>{{title}}</h1>
+
+<a href="/projects/add"> Add a new Project </a>
+
+<table>
+    <thead>
+        <th> Name </th>
+        <th> Price </th>
+        <th> Model </th>
+        <th> Color </th>
+        
+    </thead>
+    {{#each dataset}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.price}}</td>
+        <td>{{this.model}}</td>
+        <td>{{this.color}}</td>
+        <td>  
+            <a href="/projects/edit/{{this._id}}" class="btn btn-primary">Edit</a>
+            <a href="/projects/delete/{{this._id}}" class="btn btn-danger">Delete</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>
